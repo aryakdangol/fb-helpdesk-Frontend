@@ -3,9 +3,11 @@ import "./ConversationBar.css";
 import ConversationBarHeader from "./ConversationBarHeader";
 import ConversationBarInbox from "./ConversationBarInbox";
 import axios from "axios";
+import ConversationBarPost from "./ConversationBarPost";
 
 function ConversationBar() {
   const [inbox, setInbox] = useState([]);
+  const [commentInbox, setCommentInbox] = useState([]);
 
   useEffect(() => {
     const fetchInbox = async () => {
@@ -17,7 +19,16 @@ function ConversationBar() {
       }
     };
 
+    const fetchComment = async () => {
+      try {
+        let response = await axios.get("http://localhost:5000/userComments");
+        setCommentInbox(response.data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
     fetchInbox();
+    fetchComment();
   }, []);
 
   return (
@@ -27,6 +38,9 @@ function ConversationBar() {
 
       {inbox.map((chat) => (
         <ConversationBarInbox key={chat.id} inboxInfo={chat} />
+      ))}
+      {commentInbox.map((chat) => (
+        <ConversationBarPost key={chat.id} inboxInfo={chat} />
       ))}
     </div>
   );

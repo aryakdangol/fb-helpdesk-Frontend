@@ -3,6 +3,7 @@
   flex-direction: column;
   flex: 0.25;
   background-color: rgb(246, 246, 247);
+  height: 120vh;
 }
 
 .profiledetail__image {

@@ -7,7 +7,7 @@ function ProfileDetailBar() {
   return (
     <div className="profiledetail">
       <div className="profiledetail__image">
-        <img src={state.profile_pic} alt="" />
+        <img src={state.profile_pic} alt="ProfileImage" />
       </div>
       <div className="profileDetail">
         <h3>Customer Detail</h3>
