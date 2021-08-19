@@ -12,9 +12,12 @@ function MessageWindowBody() {
 
   useEffect(() => {
     const fetchMessage = async () => {
-      let response = await axios.post("http://localhost:5000/userMessage", {
-        id: state.profileId,
-      });
+      let response = await axios.post(
+        "https://stark-river-56369.herokuapp.com/userMessage",
+        {
+          id: state.profileId,
+        }
+      );
 
       setMessages(response.data);
     };
@@ -29,7 +32,7 @@ function MessageWindowBody() {
   const submitText = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/userMessage/postMessage", {
+      .post("https://stark-river-56369.herokuapp.com/userMessage/postMessage", {
         profileId: state.profileId,
         senderId: "155203489993364",
         recipentId: state.profileId,

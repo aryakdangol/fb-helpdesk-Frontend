@@ -16,10 +16,13 @@ function PostWindowBody() {
   useEffect(() => {
     const fetchMessage = async () => {
       console.log("FETCHMESSAGE>>", state.commentId);
-      let response = await axios.post("http://localhost:5000/userComments", {
-        id: state.postId,
-        commentId: state.commentId,
-      });
+      let response = await axios.post(
+        "https://stark-river-56369.herokuapp.com/userComments",
+        {
+          id: state.postId,
+          commentId: state.commentId,
+        }
+      );
 
       setMessages(response.data);
     };
@@ -34,7 +37,7 @@ function PostWindowBody() {
   const submitText = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/userComments/reply", {
+      .post("https://stark-river-56369.herokuapp.com/userComments/reply", {
         userid: messages.from,
         message: text,
         from: "155203489993364",
