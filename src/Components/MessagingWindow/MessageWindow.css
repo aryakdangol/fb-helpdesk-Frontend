@@ -1,0 +1,120 @@
+.messagewindow {
+  flex: 0.5;
+  border-right: 1px solid gray;
+}
+
+.messagewindow__header {
+  padding: 5.8px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.messagewindow__header > h3 {
+  margin-left: 10px;
+}
+
+.messagewindow {
+  background-color: rgb(246, 246, 247);
+}
+
+.messagebody {
+  display: flex;
+  flex-direction: column;
+  margin-top: -0.5rem;
+  flex-wrap: nowrap;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.messagebody::-webkit-scrollbar {
+  display: none;
+}
+
+.messagecustomer {
+  display: flex;
+  align-items: center;
+  margin-left: 0.62rem;
+}
+
+.messagecustomer > img {
+  height: 30px;
+  object-fit: contain;
+  width: 40px;
+  border-radius: 30px;
+}
+
+.messagecustomer__text {
+  background-color: rgb(255, 255, 255);
+  margin-left: 0.6rem;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 1.25rem;
+  border: 1px solid rgb(185, 181, 181);
+}
+
+.messagecustomer__infotext {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 0.8rem;
+}
+
+.chatInput {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.chatInput > input {
+  width: 92.5%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.chatInput > button {
+  background: transparent;
+  border: none;
+}
+
+.chatInput > button:hover {
+  cursor: pointer;
+}
+
+.messageuser {
+  display: flex;
+  align-items: center;
+  margin-left: 0.62rem;
+  justify-content: flex-end;
+}
+.messageuser_textcontainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.messageuser__text {
+  background-color: rgb(255, 255, 255);
+  margin-left: 0.6rem;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 1.25rem;
+  border: 1px solid rgb(185, 181, 181);
+  text-align: center;
+}
+
+.messageuser__infotext {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 0.8rem;
+}
+
+.messageuser > img {
+  height: 30px;
+  object-fit: contain;
+  width: 40px;
+  border-radius: 30px;
+}

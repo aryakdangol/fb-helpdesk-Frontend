@@ -1,0 +1,98 @@
+.conversation {
+  flex: 0.25;
+  background-color: white;
+  border-right: 1px solid gray;
+  height: 100vh;
+}
+
+.conversation__header {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conversation__headerItem1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conversation__headerItem1 > .MuiSvgIcon-root {
+  color: gray;
+}
+
+.conversation__headerItem1 > p {
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 1rem;
+}
+
+.conversation__headerItem2 {
+  margin-top: 0.7rem;
+}
+
+.conversation__headerItem2 > .MuiSvgIcon-root {
+  color: gray;
+}
+
+.coversation__line {
+  margin-top: -0.5rem;
+}
+
+.conversation__inbox {
+  padding: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.conversation__inbox:hover {
+  cursor: pointer;
+}
+
+.conversation__inboxItem1 {
+  display: flex;
+}
+
+.conversation__inboxRow1 {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.conversation__inboxUserInfo {
+  margin-top: -2rem;
+  margin-left: 2rem;
+}
+
+.conversation__inboxUserInfo > p {
+  margin-bottom: -1.5rem;
+}
+
+.conversation__inboxUserInfo > h6 {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.conversation__inboxUserTime {
+  margin-top: -1rem;
+  font-size: 14px;
+}
+
+.conversation__inboxRow2 {
+  width: 100%;
+  margin-left: 10px;
+  margin-top: -15px;
+}
+
+.conversation__inboxRow2 > p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 20rem;
+  margin-top: -1rem;
+}
