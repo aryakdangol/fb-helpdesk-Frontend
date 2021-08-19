@@ -12,7 +12,9 @@ function ConversationBar() {
   useEffect(() => {
     const fetchInbox = async () => {
       try {
-        let response = await axios.get("http://localhost:5000/userMessage");
+        let response = await axios.get(
+          "https://stark-river-56369.herokuapp.com/userMessage"
+        );
         setInbox(response.data);
       } catch (e) {
         console.log(e);
@@ -21,7 +23,9 @@ function ConversationBar() {
 
     const fetchComment = async () => {
       try {
-        let response = await axios.get("http://localhost:5000/userComments");
+        let response = await axios.get(
+          "https://stark-river-56369.herokuapp.com/userComments"
+        );
         setCommentInbox(response.data);
       } catch (e) {
         console.log(e);
